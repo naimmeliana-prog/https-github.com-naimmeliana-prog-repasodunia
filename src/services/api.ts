@@ -47,7 +47,7 @@ export async function fetchQuiz(
             explanation: q.explanation || 'Respuesta correcta.',
             tip: q.tip || 'Presta atención a los conceptos clave del tema.',
           })),
-          isAiGenerated: true,
+          isAiGenerated: data.isAiGenerated !== false,
         };
       }
     }
@@ -97,7 +97,7 @@ export async function fetchFlashcards(
             hint: f.hint || '',
             mastered: false,
           })),
-          isAiGenerated: true,
+          isAiGenerated: data.isAiGenerated !== false,
         };
       }
     }
