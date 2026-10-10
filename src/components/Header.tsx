@@ -23,20 +23,24 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs no-print">
+    <header className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-40 shadow-xs no-print">
+      {/* Top Rainbow Accent Strip */}
+      <div className="h-1 bg-gradient-to-r from-rose-500 via-amber-400 via-emerald-400 via-sky-400 via-indigo-500 to-purple-500 w-full" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           {/* Logo & School Context */}
           <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-md shadow-indigo-100 shrink-0">
-              <School className="w-6 h-6" />
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-rose-500 via-amber-400 via-emerald-400 to-indigo-600 p-[2.5px] shadow-md shadow-indigo-100/60 shrink-0">
+              <div className="w-full h-full bg-white rounded-[13px] flex items-center justify-center p-1">
+                <img src="/favicon.svg" alt="Arcoíris Neurodiversidad" className="w-full h-full object-contain" />
+              </div>
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="text-xl font-extrabold text-slate-900 tracking-tight">
                   Organizador & Repaso 2º ESO
                 </h1>
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200/60">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200/80">
                   IES Garrigosa • Meliana
                 </span>
               </div>

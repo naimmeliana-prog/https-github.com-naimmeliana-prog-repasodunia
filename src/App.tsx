@@ -340,7 +340,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50/50 via-sky-50/30 to-amber-50/30 text-slate-800 flex flex-col antialiased selection:bg-indigo-100 selection:text-indigo-900">
       {/* Top Header */}
       <Header
         streak={streak}
@@ -352,22 +352,22 @@ export default function App() {
       />
 
       {/* Main Tab Navigation */}
-      <div className="bg-white border-b border-slate-200 sticky top-[69px] z-30 shadow-2xs no-print">
+      <div className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 sticky top-[73px] z-30 shadow-2xs no-print">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center space-x-1 sm:space-x-2 overflow-x-auto py-2.5 no-scrollbar">
             <button
               onClick={() => setActiveTab('timeline')}
               className={`flex items-center gap-2 px-3.5 py-2 rounded-2xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${
                 activeTab === 'timeline'
-                  ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-200'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-200'
+                  : 'text-indigo-900 bg-indigo-50/70 hover:bg-indigo-100/80 border border-indigo-200/60'
               }`}
             >
-              <Calendar className="w-4 h-4" />
+              <Calendar className="w-4 h-4 text-indigo-500" />
               <span>1. Calendario 2 Semanas</span>
               <span
                 className={`px-1.5 py-0.2 rounded-full text-[10px] font-extrabold ${
-                  activeTab === 'timeline' ? 'bg-indigo-700 text-white' : 'bg-slate-200 text-slate-700'
+                  activeTab === 'timeline' ? 'bg-indigo-700 text-white' : 'bg-indigo-200/80 text-indigo-900'
                 }`}
               >
                 {exams.length}
@@ -378,11 +378,11 @@ export default function App() {
               onClick={() => setActiveTab('daily')}
               className={`flex items-center gap-2 px-3.5 py-2 rounded-2xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${
                 activeTab === 'daily'
-                  ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-200'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  ? 'bg-amber-600 text-white shadow-md shadow-amber-200'
+                  : 'text-amber-950 bg-amber-50/70 hover:bg-amber-100/80 border border-amber-200/60'
               }`}
             >
-              <CheckSquare className="w-4 h-4" />
+              <CheckSquare className="w-4 h-4 text-amber-500" />
               <span>2. Plan Diario de Temas</span>
             </button>
 
@@ -390,23 +390,23 @@ export default function App() {
               onClick={() => setActiveTab('tea_notes')}
               className={`flex items-center gap-2 px-3.5 py-2 rounded-2xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${
                 activeTab === 'tea_notes'
-                  ? 'bg-teal-600 text-white shadow-sm shadow-teal-200'
-                  : 'text-teal-800 bg-teal-50/70 hover:bg-teal-100/80 border border-teal-200/80'
+                  ? 'bg-teal-600 text-white shadow-md shadow-teal-200'
+                  : 'text-teal-950 bg-teal-50/70 hover:bg-teal-100/80 border border-teal-200/60'
               }`}
             >
-              <BookOpen className="w-4 h-4 text-teal-600 group-hover:text-teal-700" />
-              <span>3. Cuaderno de Apuntes TEA (Todos los Cursos)</span>
+              <BookOpen className="w-4 h-4 text-teal-500" />
+              <span>3. Cuaderno de Apuntes TEA</span>
             </button>
 
             <button
               onClick={() => setActiveTab('quiz')}
               className={`flex items-center gap-2 px-3.5 py-2 rounded-2xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${
                 activeTab === 'quiz'
-                  ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-200'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  ? 'bg-violet-600 text-white shadow-md shadow-violet-200'
+                  : 'text-violet-950 bg-violet-50/70 hover:bg-violet-100/80 border border-violet-200/60'
               }`}
             >
-              <Sparkles className="w-4 h-4 text-amber-400" />
+              <Sparkles className="w-4 h-4 text-violet-500" />
               <span>4. Cuestionarios Tipo Test</span>
             </button>
 
@@ -414,11 +414,11 @@ export default function App() {
               onClick={() => setActiveTab('flashcards')}
               className={`flex items-center gap-2 px-3.5 py-2 rounded-2xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${
                 activeTab === 'flashcards'
-                  ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-200'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  ? 'bg-purple-600 text-white shadow-md shadow-purple-200'
+                  : 'text-purple-950 bg-purple-50/70 hover:bg-purple-100/80 border border-purple-200/60'
               }`}
             >
-              <Layers className="w-4 h-4" />
+              <Layers className="w-4 h-4 text-purple-500" />
               <span>5. Tarjetas de Memoria</span>
             </button>
 
@@ -426,11 +426,11 @@ export default function App() {
               onClick={() => setActiveTab('summary')}
               className={`flex items-center gap-2 px-3.5 py-2 rounded-2xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${
                 activeTab === 'summary'
-                  ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-200'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  ? 'bg-emerald-600 text-white shadow-md shadow-emerald-200'
+                  : 'text-emerald-950 bg-emerald-50/70 hover:bg-emerald-100/80 border border-emerald-200/60'
               }`}
             >
-              <FileText className="w-4 h-4" />
+              <FileText className="w-4 h-4 text-emerald-500" />
               <span>6. Chuletas de Repaso</span>
             </button>
 
@@ -438,11 +438,11 @@ export default function App() {
               onClick={() => setActiveTab('open_answer')}
               className={`flex items-center gap-2 px-3.5 py-2 rounded-2xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${
                 activeTab === 'open_answer'
-                  ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-200'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  ? 'bg-rose-600 text-white shadow-md shadow-rose-200'
+                  : 'text-rose-950 bg-rose-50/70 hover:bg-rose-100/80 border border-rose-200/60'
               }`}
             >
-              <PenTool className="w-4 h-4" />
+              <PenTool className="w-4 h-4 text-rose-500" />
               <span>7. Preguntas Escritas</span>
             </button>
           </nav>

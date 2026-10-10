@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Transparent background, full-bleed vibrant rainbow arcs filling entire space -->
+  <defs>
+    <linearGradient id="rainbow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF1E56" />
+      <stop offset="18%" stop-color="#FF6B00" />
+      <stop offset="36%" stop-color="#FFB800" />
+      <stop offset="54%" stop-color="#00D26A" />
+      <stop offset="72%" stop-color="#00B4D8" />
+      <stop offset="88%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Full-bleed concentric rainbow arcs anchored from bottom to fill entire height and width -->
+  <g filter="url(#glow)">
+    <!-- Arc 1: Vivid Red/Coral -->
+    <path d="M 0,98 A 50,50 0 0,1 100,98 L 86,98 A 36,36 0 0,0 14,98 Z" fill="#FF1E56" />
+    
+    <!-- Arc 2: Bright Orange -->
+    <path d="M 14,98 A 36,36 0 0,1 86,98 L 74,98 A 24,24 0 0,0 26,98 Z" fill="#FF7700" />
+    
+    <!-- Arc 3: Golden Sun Yellow -->
+    <path d="M 26,98 A 24,24 0 0,1 74,98 L 62,98 A 12,12 0 0,0 38,98 Z" fill="#FFC700" />
+    
+    <!-- Arc 4: Fresh Emerald Green -->
+    <path d="M 38,98 A 12,12 0 0,1 62,98 L 52,98 A 2,2 0 0,0 48,98 Z" fill="#00C853" />
+    
+    <!-- Base Ribbon Waves: Sky Blue & Violet Base -->
+    <path d="M 0,98 Q 25,85 50,98 T 100,98 L 100,100 L 0,100 Z" fill="#00B4D8" opacity="0.9" />
+    <circle cx="50" cy="98" r="7" fill="#8B5CF6" />
+  </g>
+
+  <!-- Neurodiversity Rainbow Infinity Sparkle at Top Center -->
+  <g transform="translate(50, 22) scale(0.9)">
+    <circle cx="-16" cy="0" r="12" fill="none" stroke="#FF1E56" stroke-width="4.5" />
+    <circle cx="16" cy="0" r="12" fill="none" stroke="#00B4D8" stroke-width="4.5" />
+    <path d="M -16,-12 C -8,-12 8,12 16,12 C 24,12 28,6 28,0 C 28,-6 24,-12 16,-12 C 8,-12 -8,12 -16,12 C -24,12 -28,6 -28,0 C -28,-6 -24,-12 -16,-12 Z" 
+          fill="none" stroke="url(#rainbow-grad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
