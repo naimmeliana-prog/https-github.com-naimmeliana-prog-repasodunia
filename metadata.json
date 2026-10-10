@@ -1,0 +1,7 @@
+{
+  "name": "Planificador y Repaso 2º ESO - IES Garrigosa",
+  "description": "Herramienta de organización de exámenes y generador de cuestionarios automáticos para 2º de la ESO en el IES Garrigosa (Meliana).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
